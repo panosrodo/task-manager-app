@@ -1,0 +1,21 @@
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Visual Studio cache files
+.vs/
+
+# Dotnet publish files
+publish/
+
+# App settings secrets
+appsettings.Development.json
+appsettings.local.json
+
+# Logs
+*.log
