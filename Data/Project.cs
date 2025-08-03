@@ -9,6 +9,6 @@
 
         // Navigation properties
         public User? Owner { get; set; }
-        public ICollection<Task>? Tasks { get; set; }
+        public ICollection<TaskItem>? TaskItems { get; set; }
     }
 }

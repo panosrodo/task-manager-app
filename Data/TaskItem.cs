@@ -3,7 +3,7 @@ using TaskStatus = TaskManagerApp.Core.Enums.TaskStatus;
 
 namespace TaskManagerApp.Data
 {
-    public class Task : BaseEntity
+    public class TaskItem : BaseEntity
     {
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;

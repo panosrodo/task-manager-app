@@ -68,7 +68,7 @@ namespace TaskManagerApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tasks",
+                name: "TaskItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -85,15 +85,15 @@ namespace TaskManagerApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tasks", x => x.Id);
+                    table.PrimaryKey("PK_TaskItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tasks_Projects_ProjectId",
+                        name: "FK_TaskItems_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Tasks_Users_AssigneeId",
+                        name: "FK_TaskItems_Users_AssigneeId",
                         column: x => x.AssigneeId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -108,7 +108,7 @@ namespace TaskManagerApp.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    TaskId = table.Column<int>(type: "int", nullable: false),
+                    TaskItemId = table.Column<int>(type: "int", nullable: false),
                     InsertedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true, defaultValueSql: "GETDATE()")
                 },
@@ -116,9 +116,9 @@ namespace TaskManagerApp.Migrations
                 {
                     table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comments_Tasks_TaskId",
-                        column: x => x.TaskId,
-                        principalTable: "Tasks",
+                        name: "FK_Comments_TaskItems_TaskItemId",
+                        column: x => x.TaskItemId,
+                        principalTable: "TaskItems",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -133,12 +133,12 @@ namespace TaskManagerApp.Migrations
                 name: "TaskTags",
                 columns: table => new
                 {
-                    TaskId = table.Column<int>(type: "int", nullable: false),
+                    TaskItemId = table.Column<int>(type: "int", nullable: false),
                     TagId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TaskTags", x => new { x.TaskId, x.TagId });
+                    table.PrimaryKey("PK_TaskTags", x => new { x.TaskItemId, x.TagId });
                     table.ForeignKey(
                         name: "FK_TaskTags_Tags_TagId",
                         column: x => x.TagId,
@@ -146,17 +146,17 @@ namespace TaskManagerApp.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TaskTags_Tasks_TaskId",
-                        column: x => x.TaskId,
-                        principalTable: "Tasks",
+                        name: "FK_TaskTags_TaskItems_TaskItemId",
+                        column: x => x.TaskItemId,
+                        principalTable: "TaskItems",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_TaskId",
+                name: "IX_Comments_TaskItemId",
                 table: "Comments",
-                column: "TaskId");
+                column: "TaskItemId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_UserId",
@@ -169,13 +169,13 @@ namespace TaskManagerApp.Migrations
                 column: "OwnerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tasks_AssigneeId",
-                table: "Tasks",
+                name: "IX_TaskItems_AssigneeId",
+                table: "TaskItems",
                 column: "AssigneeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tasks_ProjectId",
-                table: "Tasks",
+                name: "IX_TaskItems_ProjectId",
+                table: "TaskItems",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
@@ -209,7 +209,7 @@ namespace TaskManagerApp.Migrations
                 name: "Tags");
 
             migrationBuilder.DropTable(
-                name: "Tasks");
+                name: "TaskItems");
 
             migrationBuilder.DropTable(
                 name: "Projects");

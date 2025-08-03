@@ -11,7 +11,7 @@ namespace TaskManagerApp.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<TaskItem> TaskItems { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<TaskTag> TaskTags { get; set; }
@@ -72,9 +72,9 @@ namespace TaskManagerApp.Data
                             .OnDelete(DeleteBehavior.Restrict);
             });
 
-            modelBuilder.Entity<Task>(entity =>
+            modelBuilder.Entity<TaskItem>(entity =>
             {
-                entity.ToTable("Tasks");
+                entity.ToTable("TaskItems");
 
                 entity.Property(t => t.Title)
                       .IsRequired()
@@ -97,9 +97,9 @@ namespace TaskManagerApp.Data
                      .ValueGeneratedOnAddOrUpdate()
                      .HasDefaultValueSql("GETDATE()");
 
-                modelBuilder.Entity<Task>()
+                modelBuilder.Entity<TaskItem>()
                             .HasOne(t => t.Assignee)
-                            .WithMany(u => u.AssignedTasks)
+                            .WithMany(u => u.AssignedTaskItems)
                             .HasForeignKey(t => t.AssigneeId)
                             .OnDelete(DeleteBehavior.Restrict);
             });
@@ -130,7 +130,7 @@ namespace TaskManagerApp.Data
 
                 entity.Property(tg => tg.InsertedAt)
                       .ValueGeneratedOnAdd()
-                      .HasDefaultValueSql("GETDATE()");
+                      .HasDefaultValueSql("GETDATE()"); 
 
                 entity.Property(tg => tg.ModifiedAt)
                       .ValueGeneratedOnAddOrUpdate()
@@ -140,11 +140,11 @@ namespace TaskManagerApp.Data
             modelBuilder.Entity<TaskTag>(entity =>
             {
                 entity.ToTable("TaskTags");
-                entity.HasKey(tt => new { tt.TaskId, tt.TagId });
+                entity.HasKey(tt => new { tt.TaskItemId, tt.TagId });
 
-                entity.HasOne(tt => tt.Task)
+                entity.HasOne(tt => tt.TaskItem)
                       .WithMany(t => t.TaskTags)
-                      .HasForeignKey(tt => tt.TaskId);
+                      .HasForeignKey(tt => tt.TaskItemId);
 
                 entity.HasOne(tt => tt.Tag)
                       .WithMany(t => t.TaskTags)

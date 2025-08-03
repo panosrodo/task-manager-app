@@ -12,7 +12,7 @@ using TaskManagerApp.Data;
 namespace TaskManagerApp.Migrations
 {
     [DbContext(typeof(TaskManagerDbContext))]
-    [Migration("20250726222636_InitialCreate")]
+    [Migration("20250803154417_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -43,7 +43,7 @@ namespace TaskManagerApp.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<int>("TaskId")
+                    b.Property<int>("TaskItemId")
                         .HasColumnType("int");
 
                     b.Property<string>("Text")
@@ -55,7 +55,7 @@ namespace TaskManagerApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TaskId");
+                    b.HasIndex("TaskItemId");
 
                     b.HasIndex("UserId");
 
@@ -127,7 +127,7 @@ namespace TaskManagerApp.Migrations
                     b.ToTable("Tags", (string)null);
                 });
 
-            modelBuilder.Entity("TaskManagerApp.Data.Task", b =>
+            modelBuilder.Entity("TaskManagerApp.Data.TaskItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -175,18 +175,18 @@ namespace TaskManagerApp.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("Tasks", (string)null);
+                    b.ToTable("TaskItems", (string)null);
                 });
 
             modelBuilder.Entity("TaskManagerApp.Data.TaskTag", b =>
                 {
-                    b.Property<int>("TaskId")
+                    b.Property<int>("TaskItemId")
                         .HasColumnType("int");
 
                     b.Property<int>("TagId")
                         .HasColumnType("int");
 
-                    b.HasKey("TaskId", "TagId");
+                    b.HasKey("TaskItemId", "TagId");
 
                     b.HasIndex("TagId");
 
@@ -241,9 +241,9 @@ namespace TaskManagerApp.Migrations
 
             modelBuilder.Entity("TaskManagerApp.Data.Comment", b =>
                 {
-                    b.HasOne("TaskManagerApp.Data.Task", "Task")
+                    b.HasOne("TaskManagerApp.Data.TaskItem", "TaskItem")
                         .WithMany("Comments")
-                        .HasForeignKey("TaskId")
+                        .HasForeignKey("TaskItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -253,7 +253,7 @@ namespace TaskManagerApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Task");
+                    b.Navigation("TaskItem");
 
                     b.Navigation("User");
                 });
@@ -269,16 +269,16 @@ namespace TaskManagerApp.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("TaskManagerApp.Data.Task", b =>
+            modelBuilder.Entity("TaskManagerApp.Data.TaskItem", b =>
                 {
                     b.HasOne("TaskManagerApp.Data.User", "Assignee")
-                        .WithMany("AssignedTasks")
+                        .WithMany("AssignedTaskItems")
                         .HasForeignKey("AssigneeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("TaskManagerApp.Data.Project", "Project")
-                        .WithMany("Tasks")
+                        .WithMany("TaskItems")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -296,20 +296,20 @@ namespace TaskManagerApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TaskManagerApp.Data.Task", "Task")
+                    b.HasOne("TaskManagerApp.Data.TaskItem", "TaskItem")
                         .WithMany("TaskTags")
-                        .HasForeignKey("TaskId")
+                        .HasForeignKey("TaskItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Tag");
 
-                    b.Navigation("Task");
+                    b.Navigation("TaskItem");
                 });
 
             modelBuilder.Entity("TaskManagerApp.Data.Project", b =>
                 {
-                    b.Navigation("Tasks");
+                    b.Navigation("TaskItems");
                 });
 
             modelBuilder.Entity("TaskManagerApp.Data.Tag", b =>
@@ -317,7 +317,7 @@ namespace TaskManagerApp.Migrations
                     b.Navigation("TaskTags");
                 });
 
-            modelBuilder.Entity("TaskManagerApp.Data.Task", b =>
+            modelBuilder.Entity("TaskManagerApp.Data.TaskItem", b =>
                 {
                     b.Navigation("Comments");
 
@@ -326,7 +326,7 @@ namespace TaskManagerApp.Migrations
 
             modelBuilder.Entity("TaskManagerApp.Data.User", b =>
                 {
-                    b.Navigation("AssignedTasks");
+                    b.Navigation("AssignedTaskItems");
 
                     b.Navigation("Comments");
 

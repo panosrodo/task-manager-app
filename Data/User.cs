@@ -20,7 +20,7 @@ namespace TaskManagerApp.Data
 
         // Navigation properties
         public ICollection<Project>? OwnedProjects { get; set; }
-        public ICollection<Task>? AssignedTasks { get; set; }
+        public ICollection<TaskItem>? AssignedTaskItems { get; set; }
         public ICollection<Comment>? Comments { get; set; }
     }
 }
