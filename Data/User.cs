@@ -16,11 +16,17 @@ namespace TaskManagerApp.Data
         public string PasswordHash { get; set; } = null!;
 
         [Required]
+        public string FirstName { get; set; } = null!;
+
+        [Required]
+        public string LastName { get; set; } = null!;
+
+        [Required]
         public UserRole Role { get; set; } = UserRole.User;
 
         // Navigation properties
-        public ICollection<Project>? OwnedProjects { get; set; }
-        public ICollection<TaskItem>? AssignedTaskItems { get; set; }
-        public ICollection<Comment>? Comments { get; set; }
+        public ICollection<Project>? OwnedProjects { get; set; } = new List<Project>();
+        public ICollection<TaskItem>? AssignedTaskItems { get; set; } = new List<TaskItem>();
+        public ICollection<Comment>? Comments { get; set; } = new List<Comment>();
     }
 }

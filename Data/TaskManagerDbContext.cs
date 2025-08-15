@@ -35,6 +35,14 @@ namespace TaskManagerApp.Data
                 entity.Property(u => u.Role)
                       .IsRequired();
 
+                entity.Property(u => u.FirstName)
+                      .IsRequired()
+                      .HasMaxLength(100);
+
+                entity.Property(u => u.LastName)
+                      .IsRequired()
+                      .HasMaxLength(100);
+
                 entity.HasIndex(u => u.Email).IsUnique();
                 entity.HasIndex(u => u.Username).IsUnique();
 
@@ -130,7 +138,7 @@ namespace TaskManagerApp.Data
 
                 entity.Property(tg => tg.InsertedAt)
                       .ValueGeneratedOnAdd()
-                      .HasDefaultValueSql("GETDATE()"); 
+                      .HasDefaultValueSql("GETDATE()");
 
                 entity.Property(tg => tg.ModifiedAt)
                       .ValueGeneratedOnAddOrUpdate()
