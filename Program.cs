@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TaskManagerApp.Data;
+using TaskManagerApp.Repositories;
 
 namespace TaskManagerApp
 {
@@ -15,6 +16,7 @@ namespace TaskManagerApp
             builder.Services.AddDbContext<TaskManagerDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddRepositories();
 
             var app = builder.Build();
 
