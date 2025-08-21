@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TaskManagerApp.Data;
-using TaskManagerApp.Services;
+using TaskManagerApp.Security;
 
 namespace TaskManagerApp.Repositories
 {

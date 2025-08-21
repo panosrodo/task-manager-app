@@ -1,4 +1,4 @@
-﻿namespace TaskManagerApp.Services
+﻿namespace TaskManagerApp.Security
 {
     public static class PasswordHasher
     {
