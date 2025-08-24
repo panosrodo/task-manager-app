@@ -1,8 +1,8 @@
 ﻿namespace TaskManagerApp.Core.Enums
 {
-    public enum TaskStatus
+    public enum TaskItemStatus
     {
-        NotStarted,
+        Open,
         InProgress,
         Completed
     }

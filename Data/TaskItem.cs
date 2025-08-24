@@ -1,5 +1,4 @@
 ﻿using TaskManagerApp.Core.Enums;
-using TaskStatus = TaskManagerApp.Core.Enums.TaskStatus;
 
 namespace TaskManagerApp.Data
 {
@@ -10,7 +9,7 @@ namespace TaskManagerApp.Data
         public DateTime DueDate { get; set; }
 
         public TaskPriority Priority { get; set; }
-        public TaskStatus Status { get; set; }
+        public TaskItemStatus Status { get; set; }
 
         public int ProjectId { get; set; }
         public int AssigneeId { get; set; }
