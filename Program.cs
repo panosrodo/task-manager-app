@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TaskManagerApp.Configuration;
 using TaskManagerApp.Data;
 using TaskManagerApp.Repositories;
 
@@ -17,6 +18,9 @@ namespace TaskManagerApp
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddRepositories();
+
+            // === AutoMapper ===
+            builder.Services.AddAutoMapper(typeof(MapperConfig));
 
             var app = builder.Build();
 
