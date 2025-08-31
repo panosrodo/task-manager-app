@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Serilog;
 using TaskManagerApp.Configuration;
 using TaskManagerApp.Data;
 using TaskManagerApp.Repositories;
@@ -10,6 +11,12 @@ namespace TaskManagerApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Serilog configuration
+            builder.Host.UseSerilog((context, config) =>
+            {
+                config.ReadFrom.Configuration(context.Configuration);
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

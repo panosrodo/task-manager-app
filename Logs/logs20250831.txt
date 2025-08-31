@@ -1,0 +1,36 @@
+[31-08-2025 23:36:44820 +03:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Brandon\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[31-08-2025 23:36:45072 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7152"
+[31-08-2025 23:36:45075 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5137"
+[31-08-2025 23:36:45157 +03:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[31-08-2025 23:36:45159 +03:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[31-08-2025 23:36:45160 +03:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Brandon\source\repos\TaskManagerApp\TaskManagerApp"
+[31-08-2025 23:36:45877 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/""" - null null
+[31-08-2025 23:36:46044 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[31-08-2025 23:36:46099 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TaskManagerApp.Controllers.HomeController" ("TaskManagerApp").
+[31-08-2025 23:36:46121 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executing ViewResult, running view "Index".
+[31-08-2025 23:36:46246 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executed ViewResult - view "Index" executed in 130.9299ms.
+[31-08-2025 23:36:46250 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)" in 147.6504ms
+[31-08-2025 23:36:46253 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[31-08-2025 23:36:46263 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/""" - 200 null "text/html; charset=utf-8" 401.9747ms
+[31-08-2025 23:36:46389 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[31-08-2025 23:36:46389 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - null null
+[31-08-2025 23:36:46429 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - 200 13764 "application/javascript; charset=utf-8" 40.6547ms
+[31-08-2025 23:36:46474 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 85.8244ms
+[31-08-2025 23:43:31446 +03:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Brandon\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[31-08-2025 23:43:31709 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7152"
+[31-08-2025 23:43:31712 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5137"
+[31-08-2025 23:43:31808 +03:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[31-08-2025 23:43:31812 +03:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[31-08-2025 23:43:31814 +03:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Brandon\source\repos\TaskManagerApp\TaskManagerApp"
+[31-08-2025 23:43:32058 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/""" - null null
+[31-08-2025 23:43:32215 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[31-08-2025 23:43:32273 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TaskManagerApp.Controllers.HomeController" ("TaskManagerApp").
+[31-08-2025 23:43:32289 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executing ViewResult, running view "Index".
+[31-08-2025 23:43:32419 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executed ViewResult - view "Index" executed in 131.4551ms.
+[31-08-2025 23:43:32422 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)" in 145.7522ms
+[31-08-2025 23:43:32424 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[31-08-2025 23:43:32433 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/""" - 200 null "text/html; charset=utf-8" 388.9645ms
+[31-08-2025 23:43:32575 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - null null
+[31-08-2025 23:43:32575 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[31-08-2025 23:43:32609 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - 200 13764 "application/javascript; charset=utf-8" 34.0973ms
+[31-08-2025 23:43:32646 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 70.8863ms
