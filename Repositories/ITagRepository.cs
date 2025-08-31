@@ -3,7 +3,7 @@ using TaskManagerApp.Data;
 
 namespace TaskManagerApp.Repositories
 {
-    public interface ITagRepository
+    public interface ITagRepository : IBaseRepository<Tag>
     {
         Task<Tag?> GetTagAsync(int id);
         Task<Tag?> UpdateTagAsync(int id, Tag tag);

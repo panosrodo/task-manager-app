@@ -3,7 +3,7 @@ using TaskManagerApp.Data;
 
 namespace TaskManagerApp.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository : IBaseRepository<User>
     {
         Task<User?> GetUserAsync(string username, string password);
         Task<User?> UpdateUserAsync(int id, User user);

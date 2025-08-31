@@ -3,7 +3,7 @@ using TaskManagerApp.Data;
 
 namespace TaskManagerApp.Repositories
 {
-    public interface ITaskItemRepository
+    public interface ITaskItemRepository : IBaseRepository<TaskItem>
     {
         Task<TaskItem?> GetTaskAsync(int taskId);
         Task<TaskItem?> UpdateTaskItemAsync(int id, TaskItem taskItem);

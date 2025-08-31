@@ -3,7 +3,7 @@ using TaskManagerApp.Data;
 
 namespace TaskManagerApp.Repositories
 {
-    public interface IProjectRepository
+    public interface IProjectRepository : IBaseRepository<Project>
     {
         Task<Project?> GetProjectAsync(int projectId);
         Task<Project?> UpdateProjectAsync(int id, Project project);

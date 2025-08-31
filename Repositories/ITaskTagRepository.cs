@@ -2,7 +2,7 @@
 
 namespace TaskManagerApp.Repositories
 {
-    public interface ITaskTagRepository
+    public interface ITaskTagRepository : IBaseRepository<TaskTag>
     {
         Task<TaskTag?> GetTaskTagAsync(int taskItemId, int tagId);
         Task AddTaskTagAsync(TaskTag taskTag);

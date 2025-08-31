@@ -3,7 +3,7 @@ using TaskManagerApp.Data;
 
 namespace TaskManagerApp.Repositories
 {
-    public interface ICommentRepository
+    public interface ICommentRepository : IBaseRepository<Comment>
     {
         Task<Comment?> GetCommentAsync(int id);
         Task<Comment?> UpdateCommentAsync(int id, Comment comment);
