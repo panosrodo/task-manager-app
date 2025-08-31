@@ -12,6 +12,47 @@ namespace TaskManagerApp.Repositories
             this.context = context;
         }
 
+        public async Task AddAsync(TaskTag entity)
+        {
+            await context.TaskTags.AddAsync(entity);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task AddRangeAsync(IEnumerable<TaskTag> entities)
+        {
+            await context.TaskTags.AddRangeAsync(entities);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(TaskTag entity)
+        {
+            context.TaskTags.Update(entity);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await Task.FromResult(false);
+        }
+
+        public async Task<TaskTag?> GetAsync(int id)
+        {
+            return await Task.FromResult<TaskTag?>(null);
+        }
+
+        public async Task<IEnumerable<TaskTag>> GetAllAsync()
+        {
+            return await context.TaskTags
+                .Include(tt => tt.TaskItem)
+                .Include(tt => tt.Tag)
+                .ToListAsync();
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await context.TaskTags.CountAsync();
+        }
+
         public async Task<TaskTag?> GetTaskTagAsync(int taskItemId, int tagId)
         {
             return await context.TaskTags
@@ -30,7 +71,6 @@ namespace TaskManagerApp.Repositories
         {
             var taskTag = await context.TaskTags
                 .FirstOrDefaultAsync(tt => tt.TaskItemId == taskItemId && tt.TagId == tagId);
-
             if (taskTag != null)
             {
                 context.TaskTags.Remove(taskTag);
@@ -53,7 +93,5 @@ namespace TaskManagerApp.Repositories
                 .Include(tt => tt.TaskItem)
                 .ToListAsync();
         }
-
-
     }
 }
