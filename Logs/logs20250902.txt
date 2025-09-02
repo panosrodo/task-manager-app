@@ -1,0 +1,54 @@
+[02-09-2025 13:39:41063 +03:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Brandon\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[02-09-2025 13:39:41433 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7152"
+[02-09-2025 13:39:41435 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5137"
+[02-09-2025 13:39:41524 +03:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[02-09-2025 13:39:41526 +03:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[02-09-2025 13:39:41527 +03:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Brandon\source\repos\TaskManagerApp\TaskManagerApp"
+[02-09-2025 13:39:42356 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/""" - null null
+[02-09-2025 13:39:42564 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[02-09-2025 13:39:42625 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TaskManagerApp.Controllers.HomeController" ("TaskManagerApp").
+[02-09-2025 13:39:42643 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executing ViewResult, running view "Index".
+[02-09-2025 13:39:42827 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executed ViewResult - view "Index" executed in 188ms.
+[02-09-2025 13:39:42831 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)" in 202.025ms
+[02-09-2025 13:39:42834 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[02-09-2025 13:39:42842 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/""" - 200 null "text/html; charset=utf-8" 500.7351ms
+[02-09-2025 13:39:42966 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[02-09-2025 13:39:42966 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/lib/bootstrap/dist/css/bootstrap.min.css""" - null null
+[02-09-2025 13:39:42966 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/css/site.css""?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0" - null null
+[02-09-2025 13:39:42966 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/lib/jquery/dist/jquery.min.js""" - null null
+[02-09-2025 13:39:42966 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/lib/bootstrap/dist/js/bootstrap.bundle.min.js""" - null null
+[02-09-2025 13:39:42975 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/TaskManagerApp.styles.css""?v=86BvYRsHHqJ9Av4jeVV3j9ftVDUf98W7e7Ve42eFILw" - null null
+[02-09-2025 13:39:42982 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/js/site.js""?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo" - null null
+[02-09-2025 13:39:43018 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - null null
+[02-09-2025 13:39:43055 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - 200 13764 "application/javascript; charset=utf-8" 89.3088ms
+[02-09-2025 13:39:43055 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/lib/jquery/dist/jquery.min.js" was not modified
+[02-09-2025 13:39:43055 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/css/site.css" was not modified
+[02-09-2025 13:39:43055 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/lib/bootstrap/dist/css/bootstrap.min.css" was not modified
+[02-09-2025 13:39:43080 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/css/site.css""?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0" - 304 null "text/css" 114.1165ms
+[02-09-2025 13:39:43082 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/lib/bootstrap/dist/css/bootstrap.min.css""" - 304 null "text/css" 116.1212ms
+[02-09-2025 13:39:43079 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/lib/jquery/dist/jquery.min.js""" - 304 null "text/javascript" 112.8154ms
+[02-09-2025 13:39:43058 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/lib/bootstrap/dist/js/bootstrap.bundle.min.js" was not modified
+[02-09-2025 13:39:43060 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/TaskManagerApp.styles.css" was not modified
+[02-09-2025 13:39:43063 +03:00 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/js/site.js" was not modified
+[02-09-2025 13:39:43100 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/lib/bootstrap/dist/js/bootstrap.bundle.min.js""" - 304 null "text/javascript" 134.361ms
+[02-09-2025 13:39:43102 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/TaskManagerApp.styles.css""?v=86BvYRsHHqJ9Av4jeVV3j9ftVDUf98W7e7Ve42eFILw" - 304 null "text/css" 127.9984ms
+[02-09-2025 13:39:43104 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/js/site.js""?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo" - 304 null "text/javascript" 122.9151ms
+[02-09-2025 13:39:43147 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 129.7938ms
+[02-09-2025 14:52:25702 +03:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Brandon\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[02-09-2025 14:52:26133 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7152"
+[02-09-2025 14:52:26135 +03:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5137"
+[02-09-2025 14:52:26239 +03:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[02-09-2025 14:52:26242 +03:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[02-09-2025 14:52:26244 +03:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Brandon\source\repos\TaskManagerApp\TaskManagerApp"
+[02-09-2025 14:52:26615 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/""" - null null
+[02-09-2025 14:52:26933 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[02-09-2025 14:52:27009 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TaskManagerApp.Controllers.HomeController" ("TaskManagerApp").
+[02-09-2025 14:52:27035 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executing ViewResult, running view "Index".
+[02-09-2025 14:52:27232 +03:00 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ] Executed ViewResult - view "Index" executed in 202.195ms.
+[02-09-2025 14:52:27241 +03:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)" in 226.2785ms
+[02-09-2025 14:52:27249 +03:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"TaskManagerApp.Controllers.HomeController.Index (TaskManagerApp)"'
+[02-09-2025 14:52:27272 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/""" - 200 null "text/html; charset=utf-8" 669.3273ms
+[02-09-2025 14:52:27429 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[02-09-2025 14:52:27429 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - null null
+[02-09-2025 14:52:27454 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_framework/aspnetcore-browser-refresh.js""" - 200 13764 "application/javascript; charset=utf-8" 24.9048ms
+[02-09-2025 14:52:27503 +03:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:7152""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 73.5972ms
